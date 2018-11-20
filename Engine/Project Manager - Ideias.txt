@@ -1,0 +1,173 @@
+﻿[MECÂNICAS PRINCIPAIS]
+
+1: 4x-ish wargame
+2: Deep combat simunaltion
+	2.1: unit, battalion, division, army
+		2.1.1: Comprehensive design for weapons and equipment
+			2.1.1.1: Medic and Engineering equipment
+			2.1.1.2: Weapons
+			2.1.1.3: Gear
+		2.1.2: Unit training
+			2.1.2.1: Combat
+			2.1.2.2: Survival Enviromental
+			2.1.2.3: Medical
+				2.1.2.3.1: Medical Care
+				2.1.2.3.2: Medical surgery
+				2.1.2.3.3: Combat medic
+				2.1.2.3.4: First Aid
+		2.1.2: Officers and Soldiers, Medic Corps and Engineers.
+		2.1.3: [MAYBE] Combat animals.
+	2.2: Vehicles
+		2.2.1: Deep custom design for vehicles, aurora 4x ship class like [FEATURE]
+		2.2.2: Horses
+		2.2.3: Tanks
+		2.2.4: Planes
+		2.2.5: Chopper
+		2.2.6: Ships
+		2.2.7: Subs
+		2.2.8: Infraestructure vehicles
+		2.2.9: [MAYBE] Futuristic vehicles (like space ships)
+		2.2.10: [MAYBE] Steam punk vehicles (like spider tanks)
+	2.3: Modern Warfere
+		2.3.1: Missiles
+		2.3.2: ICBM
+		2.3.3: Quimical and Bio weapons
+		2.3.4: Nuclear
+	2.4: Combat simmulation
+3: Tech
+	3.1: Fields
+		3.1.1: Fisics
+		3.1.2: Chimestry
+		3.1.3: Biology
+		3.1.4: Sub Fields
+			3.1.4.1: Medicine, Engeneering, Gun, ...
+
+4: Buildings
+	4.1: Civilian
+	4.2: Military
+		4.2.1: Training facilitities
+		4.2.2: Research facilitities
+		4.2.3: Bases
+		4.2.4: Bunkers
+		4.2.5: Airfields
+		4.2.6: Shipyards
+		4.2.7: Outposts
+		4.2.8: Forts
+5: Wheater & Time
+	5.1: Wheater in the grand scale
+		5.1.1: Winter, Summer, Spring, Autun
+	5.2: Wheather in region
+		5.2.1: Rain & snow, Sunny and Cloudy, Storm, etc.
+		5.2.2: Air wetness (dry, wet, superwet, superdry)
+		5.2.3: Temperature - Local
+		5.2.4: [MAYBE] Wheater disasters (like hurricanes)
+	5.3: Day Night Cicle
+	5.4: Detailed effect wheather and time has on combat
+6: Resources
+	6.1: Earth-like resources
+	6.2: Technological resources
+	6.3: [MAYBE] Alien resourcers
+7: Cities
+	7.1: Population
+	7.2: Industry & Resource creation
+		7.2.1: Resource gatering
+		7.2.2: Civilian industry
+		7.2.3: Military industry
+	7.3: Infraestructure
+		7.3.1: Civilian
+		7.3.2: Military
+		7.3.3: Transport
+	7.4: Research Centers
+	7.5: Hospital
+	7.6: Govern Beurocracy
+8: Terrain
+	8.1: River, Forest, dryland, swamp, mountain, hills.
+		8.1.1: Detailed effect terrain has on combat.
+	8.2: Small Scale
+	8.3: Big Scale
+9: Gorvernment
+
+----------------------------------------------------------------------------------------------------------------
+
+[PROBLEMS]: Definir qual o escopo que o combate vai ser realizado.
+	- Acho que fica mais fácil quando forem definidas os atributos das divisões, de qualquer forma, vai existir
+	a necessidade de abstrações sobre como o comabte vai funcionar, pq ele não vai poder ser como o Normandy 44.
+	Deixar o escopo do jogo dessa forma é muito difícil no atual momento porque teria que programar uma IA para
+	os soldados e smular tudo isso enquanto simula uma guerra mundial etc. Seria o ideal mas por enqaunto fica
+	fora.
+
+----------------------------------------------------------------------------------------------------------------
+
+[ATRIBUTOS]
+[As divisões superiores podem ter a média dos status dos soldados e dos oficiais, mais um bônus para os que as dirigem]
+1: Soldier
+	1.1: Readiness
+	1.2: Stress
+	1.3: Fear
+	1.4: Training
+		1.4.1: Weapon
+		1.4.2: Equipment
+		1.4.3: Survival
+		1.4.4: First Aid
+		1.4.5: Explosives
+		1.4.6: Stealth and Infiltration
+		1.4.7: Vehicle Training
+	1.5: Discipline
+	1.6: Tiredness
+	1.7: Pain
+2: Officer
+3: Scientist
+4: Leader
+5: Vehicle
+6: Military Facility
+7: Civilian Facility
+8: Cities
+9: Corpo humano
+	9.1: Aqui faremos uma abstração do corpo humano, como as balas e os danos não vão ser realmente colcoados.
+	Para isso, precisaremos emular os principais sistemas do corpo, assim como sangramentos, doenças, etc.
+	Esses sistemas então influenciarizarão os sistemas principais que serão usados para definir as coisas na realidade.
+	Os órgãos devem ser emulados também para servirem de base para os sistemas.
+	Os membros servirão de base para alguns atributos também, e terão como base alguns sistemas e orgãos.
+	9.2: Orgãos [OK]
+		9.2.1: Cérebro (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.2: Pele (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.3: Pulmão (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.4: Coração (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.5: Estômago (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.6: Intestinos (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.7: Rins (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.8: Baço (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.9: Olho (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.10: Fígado (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.11: Ouvido (PV - queimadura, laceracao, freeze, contusão, necrose)
+		9.2.12: O PV influencia no funcionamento
+	9.3: Sistemas pricipais:
+		9.3.1: Neurológico (% funcionamento ou número arbitrário baseado nos órgãos)
+		9.3.2: Digestivo (% funcionamento ou número arbitrário baseado nos órgãos)
+		9.3.3: Respiratório (% funcionamento ou número arbitrário baseado nos órgãos)
+		9.3.4: Cardíaco (% funcionamento ou número arbitrário baseado nos órgãos)
+		9.3.5: Excretor (% funcionamento ou número arbitrário baseado nos órgãos)
+		9.3.6: Sentidos (% funcionamento ou número arbitrário baseado nos órgãos)
+			9.3.6.1: Visão (% funcionamento ou número arbitrário baseado nos órgãos) [OK]
+			9.3.6.2: Audição (% funcionamento ou número arbitrário baseado nos órgãos) [OK]
+			9.3.6.3: Olfato (% funcionamento ou número arbitrário baseado nos órgãos)
+	9.4: Membros Externos [OK]
+		9.4.1: Cabeça
+		9.4.2: Braços
+			9.4.2.1: Braço direito
+			9.4.2.2: Braço esquerdo
+		9.4.3: Pernas
+			9.4.3.1: Perna direita
+			9.4.3.2: Perna esquerda
+		9.4.4: Tronco
+	9.5: Body internal status
+		9.5.1: Body Temperature (ºC) [OK]
+		9.5.2: Blood [OK]
+			9.5.2.1: Amount (%)
+			9.5.2.2: Oxigen (%)
+			9.5.2.3: Toxin (PPM)
+		9.5.3: Nutrition (%) [NOT OK]
+		9.5.4: Fat (number) [NOT OK]
+	9.6: Doenças
+		9.6.1: Infecção
+	9.7: Idade [NOT OK]
