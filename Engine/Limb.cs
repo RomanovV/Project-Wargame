@@ -46,17 +46,15 @@ namespace Engine
             damage_types.Add(new Damage_Types("Freeze", 0));
             damage_types.Add(new Damage_Types("Concussion", 0));
             damage_types.Add(new Damage_Types("Necrosis", 0));
-
-            //set_PV_value(limb_PV, damage_types); Se o get/set funcionar, isso não é necessário
         }
 
         // Modifica o valor do dano armazenado, causa dano do tipo [name]
         public void modify_limb_damage_by_damage_name(string name, double damage)
         {
-            this.damage_types.Find(item => item.name == name).damage = damage;
-            //set_PV_value(limb_PV, damage_types); se o get/set funcionar, isso não é necessário
+            damage_types.Find(item => item.name == name).damage += damage;
         }
 
+        // TODO: Quando calc_PV retornar valor negativo?
         public double get_PV_value(double initial_PV_value, List<Damage_Types> list_of_damages)
         {
             // TODO: Ver a possibilidade de mudar isso para 1
@@ -83,7 +81,11 @@ namespace Engine
                         break;
                 }
             }
-            return calc_pv;
+            // Talvez fazer algo se o Limb ficou com 0 de PV
+            if (calc_pv >= 0)
+                return calc_pv;
+            else
+                return 0;
         }
 
     }
