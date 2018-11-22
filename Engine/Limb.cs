@@ -10,55 +10,68 @@ namespace Engine
     {
         public string name { get; protected set; }// Nome do orgão
 
-        // TODO: Ver se o get/set estão funcionando como esperado
         public double limb_PV // Abstração do funcionamento geral, em % do total
         {
-            get { return get_PV_value(1 , damage_types); }
+            get { return get_PV_value( damage_types ); }
             protected set { }
         }
 
+        // Guarda uma lista de tipos de danos e os valores deles
         public List<Damage_Types> damage_types = new List<Damage_Types>(); // Lista de tipos de dano
 
-        private double initial_damage_burning; // dano em % inicial
-        private double initial_damage_laceration; // dano em % inicial
-        private double initial_damage_freeze; // dano em % inicial
-        private double initial_damage_concussion; // dano em % inicial
-        private double initial_damage_necrosis; // dano em % inicial
+        // TODO: Default Constructor nisso
+        private double initial_damage_burning;
+        private double initial_damage_laceration;
+        private double initial_damage_freeze;
+        private double initial_damage_concussion;
+        private double initial_damage_necrosis;
 
-        // Por enqaunto deixar como o pãdrão que está
-        // TODO: default constructor para isso
-        // TODO: Definir as propriedades, get/set
-        double burning_influence = 0.8;
-        double laceration_influence = 0.5;
-        double freeze_influence = 0.8;
-        double concussion_influence = 0.2;
-        double necrosis_influence = 1;
+        // Os pesos para os tipos de dano, os valores padrão estão no
+        // Defautl Constructor como: .8, .5, .8, .2, 1, respectivamente
+        private double burning_influence;
+        private double laceration_influence;
+        private double freeze_influence;
+        private double concussion_influence;
+        private double necrosis_influence;
 
 
         // TODO: Por enquanto vamos iniciar todos os damages com o
         // mudar para um valor na construção depois. Os doubles ali em cima
-        public Limb(string name)
+        public Limb(string name, double burning_influence = 0.8, 
+            double laceration_influence = 0.5, double freeze_influence = 0.8, 
+                double concussion_influence = 0.2, double necrosis_influence = 1)
         {
+            // Define o nome
             this.name = name;
 
-            damage_types.Add(new Damage_Types("Burning", 0));
-            damage_types.Add(new Damage_Types("laceration", 0));
-            damage_types.Add(new Damage_Types("Freeze", 0));
-            damage_types.Add(new Damage_Types("Concussion", 0));
-            damage_types.Add(new Damage_Types("Necrosis", 0));
+            // Popula os valores dos pesos
+            this.burning_influence = burning_influence;
+            this.laceration_influence = laceration_influence;
+            this.freeze_influence = freeze_influence;
+            this.concussion_influence = concussion_influence;
+            this.necrosis_influence = necrosis_influence;
+
+
+            // Popula a lista de danos, e seus valores iniciais
+            // TODO: Implemetnar os valores iniciais como parâmetros no constructor
+            damage_types.Add(new Damage_Types("Burning", 0f));
+            damage_types.Add(new Damage_Types("laceration", 0f));
+            damage_types.Add(new Damage_Types("Freeze", 0f));
+            damage_types.Add(new Damage_Types("Concussion", 0f));
+            damage_types.Add(new Damage_Types("Necrosis", 0f));
         }
 
-        // Modifica o valor do dano armazenado, causa dano do tipo [name]
+        // Causa dano baseado no tipo do dano e no valor passado
         public void modify_limb_damage_by_damage_name(string name, double damage)
         {
             damage_types.Find(item => item.name == name).damage += damage;
         }
 
-        // TODO: Quando calc_PV retornar valor negativo?
-        public double get_PV_value(double initial_PV_value, List<Damage_Types> list_of_damages)
+        // Função que calcula o dano total do sistema baseado nos tipos de danos 
+        // acumulados na lista de danos e em seus pesos
+        public double get_PV_value( List<Damage_Types> list_of_damages)
         {
-            // TODO: Ver a possibilidade de mudar isso para 1
-            double calc_pv = initial_PV_value;
+            double calc_pv = 1f;
 
             foreach (Damage_Types type in list_of_damages)
             {
@@ -81,11 +94,11 @@ namespace Engine
                         break;
                 }
             }
-            // Talvez fazer algo se o Limb ficou com 0 de PV
-            if (calc_pv >= 0)
+            // TODO: Talvez fazer algo se o Limb ficou com 0 de PV
+            if (calc_pv >= 0f)
                 return calc_pv;
             else
-                return 0;
+                return 0f;
         }
 
     }

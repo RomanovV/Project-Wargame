@@ -8,7 +8,7 @@ namespace Engine
 {
     public class Body
     {
-        public double blood_amount; // % value of total
+        public double blood_amount; // valor em l
         public double blood_oxigen; // % value of normal
 
         public double internal_bleeding; // Quantidade em l/s
@@ -19,6 +19,7 @@ namespace Engine
         public double temperature; // Body temp in ºC
 
         public double nutrition; // Body nutrition in calories (Kcal)
+        public double fat; // gordura corporal
 
         public List<External_Limb> external_limb = new List<External_Limb>(); // Lista de membros externos
         public List<Limb> internal_limb_list = new List<Limb>(); // Lista de membros internos
@@ -27,8 +28,11 @@ namespace Engine
         int age; // Idade do corpo
         
         // Default Constructor without toxin
-        public Body(double blood_amount, double blood_oxigen, double temperature,
-            double nutrition)
+        // TODO: Adicionar age, bleeding, internal bleeding.
+        // TODO: Fazer um construtor padrão que aceite parâmetros de estatus negativos
+        // como Doenças, Toxinas, e Bleeding
+        public Body(double blood_amount = 5f, double blood_oxigen = 1f, 
+            double temperature = 34f, double nutrition = 1f)
         {
             this.blood_amount = blood_amount;
             this.blood_oxigen = blood_oxigen;
@@ -65,23 +69,9 @@ namespace Engine
             internal_limb_list.Add(new Limb("Intestines")); // Excretor
             internal_limb_list.Add(new Limb("Kidneys")); // Excretor, Filtragem do Sangue e Adrenalina
             internal_limb_list.Add(new Limb("Liver")); // Filtragem dos venenos tudo e um pouco do digestivo
-            internal_limb_list.Add(new Limb("spleen")); // Imunidade
+            internal_limb_list.Add(new Limb("Spleen")); // Imunidade
 
         }
-
-        // Constructor for blood born with toxins
-        // TODO: CONFIGURAR ELE
-        public Body(double blood_amount, double blood_oxigen, double temperature,
-            double nutrition, Toxin toxin)
-        {
-            this.blood_amount = blood_amount;
-            this.blood_oxigen = blood_oxigen;
-            this.temperature = temperature;
-            this.nutrition = nutrition;
-
-            blood_toxin.Add(toxin);
-        }
-
         // Adiciona uma toxina na lista de toxinas
         public void add_toxins(string name_add, double PPM_add)
         {

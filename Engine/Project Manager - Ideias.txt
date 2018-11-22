@@ -102,8 +102,6 @@
 [As divisões superiores podem ter a média dos status dos soldados e dos oficiais, mais um bônus para os que as dirigem]
 1: Soldier
 	1.1: Readiness
-	1.2: Stress
-	1.3: Fear
 	1.4: Training
 		1.4.1: Weapon
 		1.4.2: Equipment
@@ -112,9 +110,9 @@
 		1.4.5: Explosives
 		1.4.6: Stealth and Infiltration
 		1.4.7: Vehicle Training
+		1.4.8: Medical
+		1.4.9: Engineering Military
 	1.5: Discipline
-	1.6: Tiredness
-	1.7: Pain
 2: Officer
 3: Scientist
 4: Leader
@@ -141,16 +139,17 @@
 		9.2.10: Fígado (PV - queimadura, laceracao, freeze, contusão, necrose)
 		9.2.11: Ouvido (PV - queimadura, laceracao, freeze, contusão, necrose)
 		9.2.12: O PV influencia no funcionamento
-	9.3: Sistemas pricipais:
-		9.3.1: Neurológico (% funcionamento ou número arbitrário baseado nos órgãos)
-		9.3.2: Digestivo (% funcionamento ou número arbitrário baseado nos órgãos)
-		9.3.3: Respiratório (% funcionamento ou número arbitrário baseado nos órgãos)
-		9.3.4: Cardíaco (% funcionamento ou número arbitrário baseado nos órgãos)
-		9.3.5: Excretor (% funcionamento ou número arbitrário baseado nos órgãos)
-		9.3.6: Sentidos (% funcionamento ou número arbitrário baseado nos órgãos)
-			9.3.6.1: Visão (% funcionamento ou número arbitrário baseado nos órgãos) [OK]
-			9.3.6.2: Audição (% funcionamento ou número arbitrário baseado nos órgãos) [OK]
-			9.3.6.3: Olfato (% funcionamento ou número arbitrário baseado nos órgãos)
+	9.3: Sistemas pricipais: [OK]
+		9.3.1: Neurológico (% do funcionamento baseado nos orgãos)
+		9.3.2: Digestivo (% do funcionamento baseado nos orgãos)
+		9.3.3: Respiratório (% do funcionamento baseado nos orgãos)
+		9.3.4: Cardíaco (% do funcionamento baseado nos orgãos)
+		9.3.5: Excretor (% do funcionamento baseado nos orgãos)
+		9.3.6: Sentidos (% do funcionamento baseado nos orgãos)
+			9.3.6.1: Visão (% do funcionamento baseado nos orgãos) [OK]
+			9.3.6.2: Audição (% do funcionamento baseado nos orgãos) [OK]
+			9.3.6.3: Olfato (% do funcionamento baseado nos orgãos)
+		9.3.7: Imunológico (% do funcionamento baseado nos orgãos)
 	9.4: Membros Externos [OK]
 		9.4.1: Cabeça
 		9.4.2: Braços
@@ -160,6 +159,7 @@
 			9.4.3.1: Perna direita
 			9.4.3.2: Perna esquerda
 		9.4.4: Tronco
+		9.4.5: Adicionei as mãos também
 	9.5: Body internal status
 		9.5.1: Body Temperature (ºC) [OK]
 		9.5.2: Blood [OK]
@@ -168,6 +168,36 @@
 			9.5.2.3: Toxin (PPM)
 		9.5.3: Nutrition (%) [NOT OK]
 		9.5.4: Fat (number) [NOT OK]
-	9.6: Doenças
-		9.6.1: Infecção
-	9.7: Idade [NOT OK]
+	9.6: Doenças [NOT OK - LATER]
+		9.6.1: Infecção [NOT OK - LATER]
+	9.7: Idade [NOT OK - LATER]
+	9.8: Toxinas [RE-IMPLEMENTAR - LATER]
+	9.9: Atributos do corpo:
+		1) Atributos Mentais
+			1) Raciocínio
+			2) Memória
+			3) Carisma
+			4) liderança
+			5) Intuição
+			6) Criatividade
+			7) Foco
+			8) Dor
+			9) Medo
+			10) Stresse
+			11) Sanidade
+			12) Aprendizado
+			13) Consciência
+		2) Atributos Físicos
+			1) Resistência Física
+			2) Manipulação
+			3) Velocidade
+			4) Imunidade
+			5) Visão
+			6) Audição
+			7) Olfato
+			8) Capacidade de filtrar toxinas
+			9) Fome
+			10) Frio
+			11) Cansaço
+			12) Força
+			13) Reflexos

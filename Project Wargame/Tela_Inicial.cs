@@ -24,7 +24,7 @@ namespace Project_Wargame
         {
             lblHeart.Text = player.body.internal_limb_list.Find(item => item.name == "Heart").limb_PV.ToString("");
             lblLeftHand.Text = player.body.external_limb.Find(item => item.name == "Left Hand").limb_PV.ToString("");
-            lblCirc.Text = player.cardiac_PV.ToString("");
+            lblCirc.Text = player.cardiac_system_PV.ToString("");
         }
 
         private void damageHeart_Click(object sender, EventArgs e)

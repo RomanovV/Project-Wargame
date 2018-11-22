@@ -46,6 +46,7 @@
     <Compile Include="Damage_Types.cs" />
     <Compile Include="External_Limb.cs" />
     <Compile Include="Limb.cs" />
+    <Compile Include="Person_Stats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Toxin.cs" />
   </ItemGroup>
