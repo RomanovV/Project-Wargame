@@ -7,35 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using Engine;
 
 namespace Project_Wargame
 {
     public partial class Tela_Inicial : Form
     {
-        Body_Systems player = new Body_Systems();
+        private Body_Systems _player;
 
         public Tela_Inicial()
         {
             InitializeComponent();
+            _player = new Body_Systems();
         }
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            lblHeart.Text = player.body.internal_limb_list.Find(item => item.name == "Heart").limb_PV.ToString("");
-            lblLeftHand.Text = player.body.external_limb.Find(item => item.name == "Left Hand").limb_PV.ToString("");
-            lblCirc.Text = player.cardiac_system_PV.ToString("");
+            lblHeart.Text = _player.body.internal_limb_list.Find(item => item.name == "Heart").limb_PV.ToString("");
+            lblLeftHand.Text = _player.body.external_limb.Find(item => item.name == "Left Hand").limb_PV.ToString("");
+            lblCirc.Text = _player.cardiac_system_PV.ToString("");
         }
 
         private void damageHeart_Click(object sender, EventArgs e)
         {
-            player.body.damage_internal_limb(player.body.internal_limb_list.Find(item => item.name == "Heart"), "Burning", 0.3);
-            player.body.damage_external_limbs(player.body.external_limb.Find(item => item.name == "Left Hand"), "Necrosis", 0.4);
+            _player.body.damage_internal_limb(_player.body.internal_limb_list.Find(item => item.name == "Heart"), "Burning", 0.3);
+            _player.body.damage_external_limbs(_player.body.external_limb.Find(item => item.name == "Left Hand"), "Necrosis", 0.4);
         }
 
         private void damageHeart2_Click(object sender, EventArgs e)
         {
-            player.body.damage_internal_limb(player.body.internal_limb_list.Find(item => item.name == "Heart"), "Burning", 0.1);
+            _player.body.damage_internal_limb(_player.body.internal_limb_list.Find(item => item.name == "Heart"), "Burning", 0.1);
         }
 
         private void lblHeart_Click(object sender, EventArgs e)
