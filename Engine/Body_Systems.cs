@@ -9,8 +9,20 @@ namespace Engine
     public class Body_Systems
     {
         // TODO: Implementar uma forma de sistemas dependerem dos outros
-        // TODO: Verificar os tipos de acesso aqui
-        public Body body { get; protected set; }
+        // TODO: Verificar as propriedades
+        private Body body;
+
+        public class Body_System_Specs
+        {
+            public string name { get; protected set; }
+            public double weight { get; protected set; }
+
+            public Body_System_Specs(string name, double weight)
+            {
+                this.name = name;
+                this.weight = weight;
+            }
+        }
 
         // Lista dos pesos e orgãos da visão e variavel do PV da visão Gettada
         // Pela função
@@ -22,10 +34,10 @@ namespace Engine
         }
 
         //
-        private List<Body_System_Specs> heationg_system = new List<Body_System_Specs>();
-        public double heationg_system_PV
+        private List<Body_System_Specs> hearing_system = new List<Body_System_Specs>();
+        public double hearing_system_PV
         {
-            get { return body_system_get(heationg_system); }
+            get { return body_system_get(hearing_system); }
             protected set { }
         }
 
@@ -96,19 +108,17 @@ namespace Engine
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public Body_Systems()
+        public Body_Systems(Body body)
         {
-            // Instanciando Body com os valores padrões
-            //TODO: Passar como referência os valores padrão pro body
-            body = new Body(5f, 1f, 34f, 1f);
+            this.body = body;
 
             // Sistema visual: 50% para cada olho
             sight_system.Add(new Body_System_Specs("Right Eye", 0.5));
             sight_system.Add(new Body_System_Specs("Left Eye", 0.5));
 
             // Sistema auditivo: 50% para cada orelha
-            heationg_system.Add(new Body_System_Specs("Right Ear", 0.5));
-            heationg_system.Add(new Body_System_Specs("Left Ear", 0.5));
+            hearing_system.Add(new Body_System_Specs("Right Ear", 0.5));
+            hearing_system.Add(new Body_System_Specs("Left Ear", 0.5));
 
             // Sistema olfativo: 100% nariz
             smell_system.Add(new Body_System_Specs("Nose", 1));

@@ -6,43 +6,39 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class Person_Stats
+    public class Person_Stats
     {
-        Body_Systems body_system;
+        // Aqui ficam os status da pessoa, os status são definidos como:
+        // coisas que influenciam os sistemas e atributos, a mais
+        // superestrutural das características da pessoa.
 
-        // Atributos Mentais
-        double logic;
-        double memory;
-        double charisma;
-        double leadership; //MAYBE
-        double intuition;
-        double criativity;
-        double focus;
-        double pain;
-        double fear;
-        double stress;
-        double sanity;
-        double learning;
-        double consciousness;
 
-        // Atributos Físicos
-        double resistence;
-        double manipulation;
-        double speed;
-        double immunity;
-        double hearing;
-        public double sight
+        // Os atributos vão de 0 à 100.
+        // Atrbutos Mentais
+        public double pain;
+        public double focus;
+        public double fear;
+        public double stress;
+        public double sanity;
+
+        // Atributos físicos
+        public double hunger; // Quantidade de calorias queimadas num dado intervalo de tempo [Kcal/5s]
+        public double cold;
+        public double tiredness;
+
+        public Person_Stats(double pain_score_start = 50f, double focus_score_start = 50f,
+            double fear_score_start = 50f, double stress_score_start = 50f, double sanity_score_start = 50f,
+                double hunger_score_start = 50f, double cold_score_start = 50f, double tiredness_score_start = 50f)
         {
-            get { return body_system.sight_system_PV; }
-            protected set { }
+            pain = pain_score_start;
+            focus = focus_score_start;
+            fear = fear_score_start;
+            stress = stress_score_start;
+            sanity = sanity_score_start;
+            hunger = hunger_score_start;
+            cold = cold_score_start;
+            tiredness = tiredness_score_start;
         }
-        double smell;
-        double toxin_filtering;
-        double hunger;
-        double cold;
-        double tiredness;
-        double strenght;
-        double reflexes;
 
     }
 }

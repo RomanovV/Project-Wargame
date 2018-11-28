@@ -9,33 +9,29 @@ namespace Engine
     public class Body
     {
         public double blood_amount; // valor em l
-        public double blood_oxigen; // % value of normal
 
-        public double internal_bleeding; // Quantidade em l/s
-        public double bleeding; // Quantidade em l/s
+        public double internal_bleeding; // Quantidade em l/5s
+        public double bleeding; // Quantidade em l/5s
 
-        public List<Toxin> blood_toxin = new List<Toxin>(); // List of Toxins in blood 
+        public List<Toxin> blood_toxin_list = new List<Toxin>(); // List of Toxins in blood 
 
         public double temperature; // Body temp in ºC
 
         public double nutrition; // Body nutrition in calories (Kcal)
-        public double fat; // gordura corporal
 
         public List<External_Limb> external_limb = new List<External_Limb>(); // Lista de membros externos
         public List<Limb> internal_limb_list = new List<Limb>(); // Lista de membros internos
 
         // TODO: Implemntar uma fraca influência do corpo nos atributos físicos.
-        int age; // Idade do corpo
+        public double age; // Idade do corpo
         
         // Default Constructor without toxin
         // TODO: Adicionar age, bleeding, internal bleeding.
         // TODO: Fazer um construtor padrão que aceite parâmetros de estatus negativos
         // como Doenças, Toxinas, e Bleeding
-        public Body(double blood_amount = 5f, double blood_oxigen = 1f, 
-            double temperature = 34f, double nutrition = 1f)
+        public Body(double blood_amount = 5f, double temperature = 34f, double nutrition = 1f)
         {
             this.blood_amount = blood_amount;
-            this.blood_oxigen = blood_oxigen;
             this.temperature = temperature;
             this.nutrition = nutrition;
 
@@ -72,11 +68,7 @@ namespace Engine
             internal_limb_list.Add(new Limb("Spleen")); // Imunidade
 
         }
-        // Adiciona uma toxina na lista de toxinas
-        public void add_toxins(string name_add, double PPM_add)
-        {
-            blood_toxin.Add(new Toxin(name_add, PPM_add));
-        }
+
 
         // Retorna a PPM de uma toxina pelo nome
         // TODO: Depois que mudar a toxina para uma versão mais complexa
@@ -84,40 +76,32 @@ namespace Engine
         // da PPM
         public double get_toxin_PPM_by_name(string name)
         {
-            return blood_toxin.Find(item => item.name == name).PPM;
+            return blood_toxin_list.Find(item => item.name == name).PPM;
         }
 
         // Modifica o valor de PPM de uma toxina pelo nome
         // TODO: Quando mudar a toxina, mudar aqui os valores que podem ser mudados
         // ou passar uma função que retorna ua toxina para essa função para ela 
         // ser modificada aqui
-        public void change_toxin_by_name(string name_to_change, double PPM_to_change)
+        public void change_toxin_amount(string name_to_change, double PPM_to_change)
         {
-            blood_toxin.Find(item => item.name == name_to_change).PPM = PPM_to_change;
-        }
-
-        // TODO: Juntar todos esses danos num só, para ficar mais facil depois de
-        // saber/chamar cada um
-        // Causa dano no orgão externo dependendo do tipo do dano
-        public void damage_external_limbs(External_Limb external_limb, string name, double damage)
-        {
-            external_limb.modify_limb_damage_by_damage_name(name, damage);
+            blood_toxin_list.Find(item => item.name == name_to_change).PPM = PPM_to_change;
         }
 
         // Causa dano na pele dependendo do tipo do dano
         // TODO: Ver a possibilidade de juntar essa com a função de cima com um Switch/Case
-        public void damage_skin_external_limbs(External_Limb external_limb, string name, double damage)
+        public void damage_skin(External_Limb external_limb, string name, double damage)
         {
             external_limb.modify_skin_damage_by_damage_name(name, damage);
         }
 
         // Causa dano nos ossos dentro de um "orgão" externo
-        public void damage_bone_external_limb(External_Limb bone, double damage)
+        public void damage_bone(External_Limb bone, double damage)
         {
             bone.modify_bone_damage(damage);
         }
 
-        // Causa dano no orgão interno dependendo do tipo do dano
+        // Causa dano no orgão dependendo do tipo do dano
         public void damage_internal_limb(Limb limb, string name, double damage)
         {
             limb.modify_limb_damage_by_damage_name(name, damage);
