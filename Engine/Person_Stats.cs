@@ -22,14 +22,14 @@ namespace Engine
 
         // Atributos físicos
         public double hunger; // Quantidade de calorias queimadas num dado intervalo de tempo [Kcal/5s]
-        public double cold;
+        public double cold; // Não sei se faz sentido existir já que já existe temperatura corporal.
         public double tiredness;
 
-        public Person_Stats(double pain_score_start = 50f, double focus_score_start = 50f,
-            double fear_score_start = 50f, double stress_score_start = 50f, double sanity_score_start = 50f,
-                double hunger_score_start = 50f, double cold_score_start = 50f, double tiredness_score_start = 50f)
+        public Person_Stats(double focus_score_start = 50f, double fear_score_start = 50f,
+            double stress_score_start = 50f, double sanity_score_start = 50f,
+                double hunger_score_start = 50f, double cold_score_start = 50f,
+                    double tiredness_score_start = 50f)
         {
-            pain = pain_score_start;
             focus = focus_score_start;
             fear = fear_score_start;
             stress = stress_score_start;
