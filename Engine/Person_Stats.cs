@@ -15,7 +15,6 @@ namespace Engine
 
         // Os atributos vão de 0 à 100.
         // Atrbutos Mentais
-        public double pain;
         public double focus;
         public double fear;
         public double stress;

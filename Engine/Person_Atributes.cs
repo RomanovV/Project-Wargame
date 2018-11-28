@@ -36,6 +36,7 @@ namespace Engine
         public double learning;
 
         public double consciousness;
+        public double pain;
 
         // Atributos Físicos
 
