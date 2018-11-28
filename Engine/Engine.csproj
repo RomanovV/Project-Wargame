@@ -43,6 +43,7 @@
     <Compile Include="Body.cs" />
     <Compile Include="Body_Systems.cs" />
     <Compile Include="Damage_Types.cs" />
+    <Compile Include="Disease.cs" />
     <Compile Include="External_Limb.cs" />
     <Compile Include="Limb.cs" />
     <Compile Include="Person.cs" />
