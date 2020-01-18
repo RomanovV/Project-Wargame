@@ -13,7 +13,7 @@ namespace Engine
 
         // TODO: Ver melhor esse negocio de enum
         public enum Disease_Type { Virus, Bacteria, Fungae, Vermin, Toxine, Enviromental };
-        Disease_Type type;
+        Disease_Type disease_type;
         public enum Infection_Type { Contact, Inalation, Igenstion };
         Infection_Type infection_type;
 
@@ -21,7 +21,6 @@ namespace Engine
 
         public Disease()
         {
-
         }
 
     }

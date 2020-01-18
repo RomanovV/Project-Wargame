@@ -16,6 +16,24 @@ namespace Engine
             protected set { }
         }
 
+        // Declaração dos tipos de dano
+        public class Damage_Types
+        {
+            // TODO: TROCAR name por Type_of_Damage. Pq aí quando for lidar com os danos
+            // não vai lidar na forma de string, que pode dar erro por case sensitive.
+            public string name { get; protected set; }
+            public enum Type_of_Damages { Burning, Laceration, Freeze, Concussion, Necrosis }
+            public double damage;
+
+            // TODO: public double time_to_recuperate;
+
+            public Damage_Types(string name, double damage)
+            {
+                this.name = name;
+                this.damage = damage;
+            }
+        }
+
         // Guarda uma lista de tipos de danos e os valores deles
         public List<Damage_Types> damage_types = new List<Damage_Types>(); // Lista de tipos de dano
 
