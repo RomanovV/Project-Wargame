@@ -33,6 +33,8 @@ namespace Engine
         // TODO: Adicionar age, bleeding, internal bleeding.
         // TODO: Fazer um construtor padrão que aceite parâmetros de estatus negativos
         // como Doenças, Toxinas, e Bleeding
+        // TODO: Fazer o construtor receber uma lista de nomes de membros internos e membros externos
+        // para fazer um construtor que valha para coisas que nao sao humanas
         public Body(double blood_amount = 5f, double temperature = 34f, double nutrition = 1f)
         {
             this.blood_amount = blood_amount;
@@ -73,6 +75,33 @@ namespace Engine
 
         }
 
+        /// <summary>
+        /// Metodo para popular a lista de partes externas a partir de uma
+        /// lista de nomes. 
+        /// Safeguard para o futuro
+        /// </summary>
+        /// <param name="external_limb_name_list">Lista de nomes dos membros externos</param>
+        public void populate_external_limbs(List<string> external_limb_name_list)
+        {
+            foreach (string name in external_limb_name_list)
+            {
+                external_limb.Add(new External_Limb(name));
+            }
+        }
+
+        /// <summary>
+        /// Metodo para popular a lista de partes externas a partir de uma
+        /// lista de nomes. 
+        /// Safeguard para o futuro 
+        /// </summary>
+        /// <param name="internal_limb_name_list">Lista de nomes dos membros internos</param>
+        public void populate_internal_limbs(List<string> internal_limb_name_list)
+        {
+            foreach (string name in internal_limb_name_list)
+            {
+                internal_limb_list.Add(new Limb(name));
+            }
+        }
 
         // Retorna a PPM de uma toxina pelo nome
         // TODO: Depois que mudar a toxina para uma versão mais complexa
@@ -100,6 +129,7 @@ namespace Engine
         }
 
         // Causa dano nos ossos dentro de um "orgão" externo
+        // TODO: Esse método vai sumir.
         public void damage_bone(External_Limb bone, double damage)
         {
             bone.modify_bone_damage(damage);

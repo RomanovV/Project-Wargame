@@ -18,7 +18,6 @@ namespace Engine
         public double height;
         public double weight;
         
-        // Enum para essas coisas aqui. Assim que eu descobrir como usar enum
         public string skin_color;
         public string eye_color;
         public string hair_color;

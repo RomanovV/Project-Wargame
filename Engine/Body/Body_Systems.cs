@@ -107,6 +107,10 @@ namespace Engine
 
         /// <summary>
         /// Default Constructor
+        /// TODO: Fazer de uma forma que pegue o nome do orgão pela definição
+        /// dele no Body. Ou seja, caso eu queira alguem que por padrão tem 3 braços
+        /// eu tenho que pegar cada valor dos braços. Ou algo assim.
+        /// FIXME: Só funciona para humanos.
         /// </summary>
         public Body_Systems(Body body)
         {
@@ -163,8 +167,14 @@ namespace Engine
         /// A mágica ta na lista_of_specs que contém o nome e o peso dos orgãos
         /// Muito orgulho dessa função
         /// </summary>
-        /// <param name="list_of_specs"></param>
+        /// <param name="list_of_specs">Lista de nomes e pesos do sitema a ser verificado</param>
         /// <returns>o PV do sistema baseado no PV dos orgãos e seu respectivo peso no sitema</returns>
+        /// 
+        /// TODO: Implementar uma forma de fazer esssa função funcionar com systemas
+        /// Da pra fazer o seguinte: Se o nome contem System, coloca um IF na
+        /// função body_system_get que se tiver system, procura numa (e isso tem
+        /// implementar tambén) lista de systemas o systema cujo nome foi passado,
+        /// caso não tenha Systema, faz o que ja faz
         public double body_system_get(List<Body_System_Specs> list_of_specs)
         {
             double calc_value = 0;

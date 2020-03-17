@@ -69,7 +69,7 @@ namespace Engine
         }
 
         // TODO: Ver o que da pra fazer com isso, se isso ta certinho. Ou se existe um jeito
-        // Melhor. Caso não exita, mudar o nome de Specs para algo mais genérico.
+        // Melhor. Caso não exita, mudar o nome de Specs para algo menos genérico.
         public double getAtributeValue(double score, List<Specs> list)
         {
             double calc_value = 0f;

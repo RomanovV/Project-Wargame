@@ -10,28 +10,13 @@ namespace Engine
     {
         public string name { get; protected set; }
 
-        public class Damage_Types
-        {
-            public string name;
-            public enum type { crack, brake}
-            public double damage;
-
-            public Damage_Types(string name, double damage)
-            {
-                this.name = name;
-                this.damage = damage;
-            }
-        }
-
-        public List<Damage_Types> damage_types = new List<Damage_Types>();
-
         public double bone_HP 
         { 
-            get { return getBoneHP( damage_types ); } 
+            get { return getBoneHP(  ); } 
             protected set { }
         }
 
-        private double getBoneHP(object damage_types)
+        private double getBoneHP()
         {
             
         }
