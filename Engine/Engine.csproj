@@ -40,19 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Body.cs" />
-    <Compile Include="Body_Systems.cs" />
-    <Compile Include="Disease.cs" />
-    <Compile Include="External_Limb.cs" />
-    <Compile Include="Limb.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Person_Atributes.cs" />
-    <Compile Include="Person_Stats.cs" />
+    <Compile Include="Body\Body.cs" />
+    <Compile Include="Body\Body_Systems.cs" />
+    <Compile Include="Ailments\Disease.cs" />
+    <Compile Include="Body\External_Limb.cs" />
+    <Compile Include="Body\Limb.cs" />
+    <Compile Include="Body\Person.cs" />
+    <Compile Include="Body\Person_Atributes.cs" />
+    <Compile Include="Body\Person_Stats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Toxin.cs" />
+    <Compile Include="Ailments\Toxin.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Project Manager - Ideias.txt" />
+    <Content Include="Project Manager\Project Manager - Ideias.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

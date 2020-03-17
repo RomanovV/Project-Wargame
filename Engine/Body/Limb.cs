@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
+    /// <summary>
+    /// Define um orgão interno ou externo, seu funcionamento e dano.
+    /// </summary>
     public class Limb
     {
         public string name { get; protected set; }// Nome do orgão
@@ -16,6 +19,7 @@ namespace Engine
             protected set { }
         }
 
+        // Mudar para Enum?
         // Declaração dos tipos de dano
         public class Damage_Types
         {
@@ -46,6 +50,7 @@ namespace Engine
 
         // Os pesos para os tipos de dano, os valores padrão estão no
         // Defautl Constructor como: .8, .5, .8, .2, 1, respectivamente
+        // TODO: Doenças afetam os limbs dando dano, que dano?
         private double burning_influence;
         private double laceration_influence;
         private double freeze_influence;
@@ -53,7 +58,7 @@ namespace Engine
         private double necrosis_influence;
 
 
-        // TODO: Por enquanto vamos iniciar todos os damages com o
+        // TODO: Por enquanto vamos iniciar todos os damages com 0
         // mudar para um valor na construção depois. Os doubles ali em cima
         public Limb(string name, double burning_influence = 0.8, 
             double laceration_influence = 0.5, double freeze_influence = 0.8, 

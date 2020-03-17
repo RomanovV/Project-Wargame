@@ -15,6 +15,10 @@ namespace Engine
         }
 
         // TODO: Arrumar as propriedades daqui
+        // RENAME: damage_bone
+        // TODO: Calcular o dano igual os outros danos.
+        // TODO: Bone Crack
+        // TODO: Transformar Bone em Classe
         public double bone_PV = 1f; // Abstração de quão quebrado está o osso
 
         public List<Damage_Types> skin_damage_types = new List<Damage_Types>();
@@ -45,6 +49,7 @@ namespace Engine
         {
             this.skin_damage_types.Find(item => item.name == name).damage += damage;
         }
+
 
         // Modifica o valor do dano no osso
         // TODO: Melhorar o encapsulamento disso

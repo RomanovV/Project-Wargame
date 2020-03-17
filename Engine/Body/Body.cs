@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
+    /// <summary>
+    /// Corpo humano com todos os seus membros e orgãos.
+    /// TODO: Fazer um método para melhoramento fisico e mental. Aprendizado e treinamento
+    /// </summary>
     public class Body
     {
         public double blood_amount; // valor em l
