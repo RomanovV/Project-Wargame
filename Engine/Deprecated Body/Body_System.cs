@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine
+namespace Engine.DeprecatedBody
 {
     /// <summary>
     /// Essa é uma versão teste para criação de sistemas do corpo
@@ -69,7 +69,7 @@ namespace Engine
             {
                 if(spec.name.Contains("System"))
                 {
-                    // TODO: Implementar isso quando mudar de System_Specs para System_Spec
+                    // TODO: Implementar isso quando mudar de System_Specs para System_Spec [???]
                     // pv += spec.weight * body.system_list.Find(item => item.name == spec.name).system_PV;
                 }
                 else

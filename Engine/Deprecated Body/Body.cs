@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine
+namespace Engine.DeprecatedBody
 {
     /// <summary>
     /// Corpo humano com todos os seus membros e orgãos.

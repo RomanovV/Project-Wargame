@@ -40,16 +40,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Body\Body.cs" />
-    <Compile Include="Body\Body_Systems.cs" />
+    <Compile Include="Deprecated Body\Body.cs" />
+    <Compile Include="Deprecated Body\Body_System.cs" />
+    <Compile Include="Deprecated Body\Body_Systems.cs" />
     <Compile Include="Ailments\Disease.cs" />
-    <Compile Include="Body\External_Limb.cs" />
-    <Compile Include="Body\Limb.cs" />
-    <Compile Include="Body\Person.cs" />
-    <Compile Include="Body\Person_Atributes.cs" />
-    <Compile Include="Body\Person_Stats.cs" />
+    <None Include="Deprecated Body\DEPRECATED_Bone" />
+    <None Include="Deprecated Body\DEPRECATED_External_Limb" />
+    <None Include="Deprecated Body\DEPRECATED_Limb" />
+    <Compile Include="Deprecated Body\Person.cs" />
+    <Compile Include="Deprecated Body\Person_Atributes.cs" />
+    <Compile Include="Deprecated Body\Person_Stats.cs" />
+    <Compile Include="Person Body\Body.cs" />
+    <Compile Include="Person Body\BodySystem.cs" />
+    <Compile Include="Person Body\Bone.cs" />
+    <Compile Include="Person Body\DamageController.cs" />
+    <Compile Include="Person Body\ExternalLimb.cs" />
+    <Compile Include="Person Body\InternalLimb.cs" />
+    <Compile Include="Person Body\Limb.cs" />
+    <Compile Include="Person Body\TypeOfDamage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ailments\Toxin.cs" />
+    <Compile Include="Soldier\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Project Manager\Project Manager - Ideias.txt" />
