@@ -23,6 +23,12 @@ namespace Engine
 
         public double nutrition; // Body nutrition in calories (Kcal)
 
+        // public double oxigen_need
+        // {
+        //    get { oxigen_need_weighted_by_system_need(algo) }
+        //    protected set { }
+        // }
+
         public List<External_Limb> external_limb = new List<External_Limb>(); // Lista de membros externos
         public List<Limb> internal_limb_list = new List<Limb>(); // Lista de membros internos
 

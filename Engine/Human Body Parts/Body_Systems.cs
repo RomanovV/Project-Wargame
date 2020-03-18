@@ -25,6 +25,7 @@ namespace Engine
         }
 
         // Lista dos pesos e orgãos da visão e variavel do PV da visão Gettada
+
         // Pela função
         private List<Body_System_Specs> sight_system = new List<Body_System_Specs>();
         public double sight_system_PV
@@ -119,24 +120,28 @@ namespace Engine
             // Sistema visual: 50% para cada olho
             sight_system.Add(new Body_System_Specs("Right Eye", 0.5));
             sight_system.Add(new Body_System_Specs("Left Eye", 0.5));
+            /// TODO: Circulatory, Nerve e Central Nerve Influence
 
             // Sistema auditivo: 50% para cada orelha
             hearing_system.Add(new Body_System_Specs("Right Ear", 0.5));
             hearing_system.Add(new Body_System_Specs("Left Ear", 0.5));
+            /// TODO: Circulatory, Nerve e Central Nerve Influence
 
             // Sistema olfativo: 100% nariz
             smell_system.Add(new Body_System_Specs("Nose", 1));
+            /// TODO: Respiratory, Circulatory, Nerve e Central Nerve influence
 
             // Sistema respiratório: Nariz 10%, Pulmão 70%, Coração 20%
             respiratory_system.Add(new Body_System_Specs("Lungs", 0.7));
             respiratory_system.Add(new Body_System_Specs("Nose", 0.1));
             respiratory_system.Add(new Body_System_Specs("Heart", 0.2));
+            /// TODO: Circulatory, Nerve, Central Nerve Influence
 
             // Sistema cardíaco: Coração 70%, Rim 10%, Pulmão 20%
             cardiac_system.Add(new Body_System_Specs("Heart", 0.7));
             cardiac_system.Add(new Body_System_Specs("Kidneys", 0.1));
             cardiac_system.Add(new Body_System_Specs("Lungs", 0.2));
-
+            /// TODO: Respiratory, Excretory, Nerve e Central Nerve Influence
 
             // Sistema Nervoso Central: Espinha 90%, Cérebro 10%
             central_nerve_system.Add(new Body_System_Specs("Spine", 0.9));
@@ -145,20 +150,24 @@ namespace Engine
             // Sistema Nervoso: Cérebro 90%, Espinha 10%
             nerve_system.Add(new Body_System_Specs("Brain", 0.9));
             nerve_system.Add(new Body_System_Specs("Spine", 0.1));
+            /// TODO: Respiratory, Circulatory Influence
 
             // Sistema Excretor: Rins 60%, Fígado 20%, Intestinos 20%
             excretory_system.Add(new Body_System_Specs("Kidneys", 0.6));
             excretory_system.Add(new Body_System_Specs("Liver", 0.2));
             excretory_system.Add(new Body_System_Specs("Intestines", 0.2));
+            /// TODO: Nerve, Central Nerve, Circulatory Influence
 
             // Sistema Digestivo: Estômago 50%, Fígado 10%, Intestinos 25%, Boca 15%
             digestive_system.Add(new Body_System_Specs("Stomach", 0.5));
             digestive_system.Add(new Body_System_Specs("Liver", 0.1));
             digestive_system.Add(new Body_System_Specs("Intestines", 0.25));
             digestive_system.Add(new Body_System_Specs("Mouth", 0.15));
+            /// TODO: Nerve, Central Nerve, Circulatory
 
             // Sistema Imunológico: Baço 100%
             immune_system.Add(new Body_System_Specs("Spleen", 1));
+            /// TODO: Circulatory
 
         }
 
