@@ -9,7 +9,7 @@ namespace Engine
     /// <summary>
     /// Classe que descreve o funcionamento geral de um orgão.
     /// </summary>
-    class Limb
+    public class Limb
     {
         public string name { get; protected set; }
 
@@ -21,6 +21,8 @@ namespace Engine
         /// <summary>
         /// Abstração do funcionamento de um Orgão.
         /// </summary>
+        /// TODO: Precisa settar o HP como 1000 toda vez na função do get 
+        /// ou pode deixar como default na declaração?
         public double hp
         {
             get { return getHP(); }
@@ -30,7 +32,7 @@ namespace Engine
         /// <summary>
         /// Construtor Padrão
         /// </summary>
-        /// <param name="damageControllers">Controlador do dano para o Orgão.</param>
+        /// <param name="damageControllers"> Recebe uma lista de controlador do dano para o Orgão.</param>
         public Limb(string name,
                     List<DamageController> damageControllers)
         {
@@ -66,7 +68,8 @@ namespace Engine
         }
 
         /// <summary>
-        /// Metodo que causa dano no orgão.
+        /// Metodo que causa dano no orgão. Procura na lsita de controladores o controlador
+        /// pelo tipo do dano e modifica.
         /// </summary>
         /// <param name="type">Tipo do dano a ser causado</param>
         /// <param name="damage">Valor do dano a ser causado</param>
@@ -76,7 +79,9 @@ namespace Engine
         }
 
         /// <summary>
-        /// Metodo que retorna o HP/Funcionamento  baseado nos danos que recebeu
+        /// Metodo que retorna o HP/Funcionamento  baseado nos danos que recebeu.
+        /// Varre a lista de controladores de dano e subtrai do HP total o dano multiplicado
+        /// pela influencia daquele dano no orgão.
         /// </summary>
         /// <returns>O HP Calculado</returns>
         public double getHP()

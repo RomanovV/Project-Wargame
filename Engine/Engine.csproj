@@ -40,31 +40,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deprecated Body\Body.cs" />
-    <Compile Include="Deprecated Body\Body_System.cs" />
-    <Compile Include="Deprecated Body\Body_Systems.cs" />
-    <Compile Include="Ailments\Disease.cs" />
+    <None Include="Deprecated Body\DEPRECATED_Body" />
+    <None Include="Deprecated Body\DEPRECATED_Body_System" />
+    <None Include="Deprecated Body\DEPRECATED_Body_Systems" />
+    <None Include="Deprecated Body\Disease" />
     <None Include="Deprecated Body\DEPRECATED_Bone" />
     <None Include="Deprecated Body\DEPRECATED_External_Limb" />
     <None Include="Deprecated Body\DEPRECATED_Limb" />
-    <Compile Include="Deprecated Body\Person.cs" />
-    <Compile Include="Deprecated Body\Person_Atributes.cs" />
-    <Compile Include="Deprecated Body\Person_Stats.cs" />
+    <None Include="Deprecated Body\Person" />
+    <None Include="Deprecated Body\Person_Atributes" />
+    <None Include="Deprecated Body\Person_Stats" />
     <Compile Include="Person Body\Body.cs" />
     <Compile Include="Person Body\BodySystem.cs" />
     <Compile Include="Person Body\Bone.cs" />
     <Compile Include="Person Body\DamageController.cs" />
     <Compile Include="Person Body\ExternalLimb.cs" />
-    <Compile Include="Person Body\InternalLimb.cs" />
+    <Compile Include="Person Body\Ilness.cs" />
+    <Compile Include="Person Body\ilnessType.cs" />
+    <Compile Include="Person Body\infectionType.cs" />
     <Compile Include="Person Body\Limb.cs" />
     <Compile Include="Person Body\TypeOfDamage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ailments\Toxin.cs" />
+    <None Include="Deprecated Body\Toxin" />
     <Compile Include="Soldier\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Project Manager\Project Manager - Ideias.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

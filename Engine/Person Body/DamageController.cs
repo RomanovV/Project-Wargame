@@ -12,9 +12,9 @@ namespace Engine
     /// </summary>
     public class DamageController
     {
-        public TypeOfDamage type;
+        public TypeOfDamage type; // <- Protected Set?
         public double damage;
-        public double influence;
+        public double influence; // <- Protected Set?
 
         public DamageController(TypeOfDamage type, double damage, double influence)
         {

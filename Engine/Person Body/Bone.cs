@@ -9,7 +9,7 @@ namespace Engine
     /// <summary>
     /// Classe que descreve o funcionamento das Estruturas Osseas
     /// </summary>
-    class Bone
+    public class Bone
     {
         /// <summary>
         /// Nome do Osso

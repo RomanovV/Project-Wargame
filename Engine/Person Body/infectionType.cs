@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine
+namespace Engine.Person_Body
 {
-    class InternalLimb
+    public enum infectionType
     {
-
+        Contact,
+        Ingenstion,
+        Inalation,
+        Exposition
     }
 }
