@@ -38,7 +38,7 @@ namespace Engine
         /// <returns>Mensagem em Texto.</returns>
         public string boneStatusToText()
         {
-            if (hp == 1000)
+            if (hp == 1000) // TODO: Equalidade com float da merda
             {
                 return "The " + name + " is in perfect Conditions";
             }

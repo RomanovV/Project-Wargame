@@ -25,7 +25,7 @@ namespace Engine
         /// ou pode deixar como default na declaração?
         public double hp
         {
-            get { return getHP(); }
+            get => getHP();
             protected set { }
         }
 

@@ -9,8 +9,8 @@ namespace Engine.Person_Body
     public enum infectionType
     {
         Contact,
-        Ingenstion,
-        Inalation,
+        Ingestion,
+        Inhalation,
         Exposition
     }
 }

@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace Engine.Person_Body
 {
-    public class Ilness
+    public class Illness
     {
         public string name;
-        public ilnessType ilnessType;
+        public illnessType illnessType;
         public infectionType infectionType;
-        private readonly Body body;
-
-
+        private readonly Body body; // Não tem que ter um body
 
     }
 }

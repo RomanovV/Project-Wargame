@@ -55,8 +55,8 @@
     <Compile Include="Person Body\Bone.cs" />
     <Compile Include="Person Body\DamageController.cs" />
     <Compile Include="Person Body\ExternalLimb.cs" />
-    <Compile Include="Person Body\Ilness.cs" />
-    <Compile Include="Person Body\ilnessType.cs" />
+    <Compile Include="Person Body\Illness.cs" />
+    <Compile Include="Person Body\illnessType.cs" />
     <Compile Include="Person Body\infectionType.cs" />
     <Compile Include="Person Body\Limb.cs" />
     <Compile Include="Person Body\TypeOfDamage.cs" />
@@ -67,7 +67,9 @@
   <ItemGroup>
     <Content Include="Project Manager\Project Manager - Ideias.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Environment\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

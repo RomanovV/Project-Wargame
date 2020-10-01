@@ -18,7 +18,7 @@ namespace Engine
         /// </summary>
         public double hp
         {
-            get { return getHP(); }
+            get => getHP();
             protected set { }
         }
 
@@ -53,8 +53,10 @@ namespace Engine
         /// Construtor padrão.
         /// </summary>
         /// <param name="name"> Nome do sistema </param>
-        /// <param name="systemHP">TODO: Esse paramentro faz sentido estar no construtor?</param>
-        /// <param name="dependencies">A lista de dependencias desse sistema</param>
+        /// <param name="hp">TODO: Esse paramentro faz sentido estar no construtor?</param>
+        /// <param name="body">Corpo a qual esse sistema pertence</param>
+        /// <param name="limbDependencies">A lista de dependencias desse sistema</param>
+        /// <param name="systemDependencies">A lista de dependencias desse sistema</param>
         public BodySystem(string name,
                           double hp,
                           Body body,

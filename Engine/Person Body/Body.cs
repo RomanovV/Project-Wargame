@@ -9,21 +9,21 @@ namespace Engine
 {
     public class Body
     {
-        //blood stuff
+        // blood stuff
         public double bloodVolume;
         public double externalBleeding;
         public double internalBleeding;
 
-        public double confortableTemperature;
+        public double comfortableTemperature;
 
         public int age;
 
-        //TODO: Implementar os tipos de ar respiráveis como classe:
-        //public airType air blablabla
-        public bool requireAtmosfere;
-        public double minimunAtmosfere;
+        // TODO: Implementar os tipos de ar respiráveis como classe.
+        // public airType air blablabla
+        public bool requireAtmosphere;
+        public double minimumAtmosphere;
 
-        //nutrition stuff
+        // nutrition stuff
 
         public readonly List<ExternalLimb> externalLimbs = new List<ExternalLimb>();
 

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Engine.Person_Body
 {
-    public enum ilnessType
+    public enum illnessType
     {
         Virus, 
         Bacteria, 
-        Fungae, 
+        Fungal, 
         Vermin, 
-        Toxine, 
-        Enviromental, 
+        Toxin, 
+        Environmental, 
         Radiation
     }
 }
